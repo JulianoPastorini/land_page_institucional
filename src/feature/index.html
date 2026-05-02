@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliano - Portfólio (Funcionalidades Experimentais)</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="header-content">
+            <a href="#home" class="logo">J. Dev [EXPERIMENTAL]</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#playground">Playground</a></li>
+                    <li><a href="#console">Console</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="home">
+        <h1>Playground JavaScript</h1>
+        <p class="subtitle">Teste novos padrões, técnicas de manipulação de DOM e funcionalidades experimentais</p>
+        <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 30px;">⚠️ ZONA EXPERIMENTAL - Funcionalidades podem ter bugs ou estar incompletas</p>
+        <button class="cta-button" onclick="demonstrateFeature1()">Executar Demonstração de Funcionalidade #1</button>
+    </section>
+
+    <!-- SEÇÃO PLAYGROUND -->
+    <div class="skills-section" id="playground">
+        <h2 class="section-title">🧠 Área de Teste</h2>
+        
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Funcionalidade 1: Criação Dinâmica de Elementos -->
+            <div style="background: var(--surface); border: 2px dashed var(--accent-green); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                <h3 style="color: var(--accent-green); margin-bottom: 15px;">Funcionalidade #1: Geração Dinâmica de Elementos</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Clique no botão para criar e inserir dinamicamente novos elementos de DOM</p>
+                <button class="filter-btn" onclick="createDynamicElement()" style="background: transparent; border-color: var(--accent-green); color: var(--accent-green);">
+                    Adicionar Card de Competência Aleatório
+                </button>
+                <div id="dynamic-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <!-- Elements added dynamically here -->
+                </div>
+            </div>
+
+            <!-- Funcionalidade 2: Manipulação Avançada de DOM -->
+            <div style="background: var(--surface); border: 2px dashed var(--accent-cyan); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 15px;">Funcionalidade #2: Manipulação Avançada de DOM</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Clone, modifique e manipule elementos existentes</p>
+                <button class="filter-btn" onclick="cloneAndModify()" style="background: transparent; border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                    Clonar & Transformar Elemento
+                </button>
+                <div id="clone-container" style="margin-top: 20px;">
+                    <div id="original-element" style="background: rgba(0,212,255,0.1); border: 2px solid var(--accent-cyan); border-radius: 8px; padding: 15px; margin-bottom: 10px;">
+                        <p style="color: var(--accent-cyan); font-weight: bold;">Elemento Original (Fonte de clonagem)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funcionalidade 3: Delegação de Eventos -->
+            <div style="background: var(--surface); border: 2px dashed var(--accent-purple); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                <h3 style="color: var(--accent-purple); margin-bottom: 15px;">Funcionalidade #3: Delegação de Eventos & Propagação</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Clique em itens para testar delegação de eventos e manipulação dinâmica de eventos</p>
+                <div id="event-list" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+                    <!-- Itens de teste de eventos criados aqui -->
+                </div>
+                <button class="filter-btn" onclick="setupEventDelegation()" style="background: transparent; border-color: var(--accent-purple); color: var(--accent-purple);">
+                    Inicializar Demonstração de Delegação de Eventos
+                </button>
+            </div>
+
+            <!-- Funcionalidade 4: RequestAnimationFrame & Performance -->
+            <div style="background: var(--surface); border: 2px dashed var(--accent-gold); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                <h3 style="color: var(--accent-gold); margin-bottom: 15px;">Funcionalidade #4: Demonstração de requestAnimationFrame</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Animações suaves usando requestAnimationFrame para desempenho ótimo</p>
+                <button class="filter-btn" onclick="startRAFAnimation()" style="background: transparent; border-color: var(--accent-gold); color: var(--accent-gold);">
+                    Iniciar Animação
+                </button>
+                <div id="animation-box" style="width: 100px; height: 100px; background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple)); border-radius: 8px; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO CONSOLE JAVASCRIPT -->
+    <section id="console" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px;">
+        <h2 class="section-title">📊 Console do Desenvolvedor</h2>
+        <div style="background: var(--bg-darker); border: 2px solid var(--accent-cyan); border-radius: 12px; padding: 20px; font-family: 'Courier New', monospace; margin-top: 30px;">
+            <div id="console-output" style="color: var(--accent-cyan); line-height: 1.8; white-space: pre-wrap; word-break: break-all; height: 300px; overflow-y: auto; background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px;">
+> Console pronto. Use os botões acima para executar experimentos.
+            </div>
+            <button class="filter-btn" onclick="clearConsole()" style="margin-top: 15px; background: transparent; border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                Limpar Console
+            </button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE DOCUMENTAÇÃO -->
+    <section id="docs" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px;">
+        <h2 class="section-title">📚 Exemplos de Código</h2>
+        <div style="background: var(--surface); border-left: 4px solid var(--accent-green); border-radius: 8px; padding: 30px; margin-top: 30px;">
+            <h3 style="color: var(--accent-green); margin-bottom: 15px;">Padrões de Manipulação de DOM</h3>
+            <div style="background: var(--bg-darker); border-radius: 8px; padding: 15px; font-family: 'Courier New', monospace; color: var(--text-secondary); overflow-x: auto;">
+<pre>// Criando elementos dinamicamente
+const element = document.createElement('div');
+element.className = 'my-class';
+element.textContent = 'Olá Mundo';
+element.addEventListener('click', (e) => {
+    console.log('Clicado!', e.target);
+});
+document.body.appendChild(element);
+
+// Clonando e modificando
+const clone = element.cloneNode(true);
+clone.style.color = 'red';
+document.body.appendChild(clone);
+
+// Delegação de eventos
+const parent = document.getElementById('parent');
+parent.addEventListener('click', (e) => {
+    if (e.target.matches('.child')) {
+        console.log('Filho clicado!');
+    }
+});</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">🧠 VERSÃO EXPERIMENTAL | Use DevTools Console (F12) para debug completo | © 2024 Juliano</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/feature-playground.js"></script>
+</body>
+</html>

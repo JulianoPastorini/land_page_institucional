@@ -1,0 +1,89 @@
+b<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliano - Desenvolvedor Full Stack | Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="header-content">
+            <a href="#home" class="logo">J. Dev</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#skills">Competências</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="home">
+        <h1>Juliano</h1>
+        <p class="subtitle">Desenvolvedor Full Stack | Solucionador de Problemas | Pensador Criativo</p>
+        <button class="cta-button">Explorar Minhas Competências</button>
+    </section>
+
+    <!-- CONTROLES DE FILTRO -->
+    <div class="skills-section" id="skills">
+        <h2 class="section-title">🎯 Competências Técnicas</h2>
+        
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="programming">Programação</button>
+            <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+            <button class="filter-btn" data-filter="tools">Ferramentas</button>
+            <button class="filter-btn" data-filter="databases">Bancos de Dados</button>
+        </div>
+
+        <!-- GRADE DE COMPETÊNCIAS DURAS -->
+        <div class="hard-skills-container" id="hard-skills-grid">
+            <!-- Renderizado dinamicamente por JavaScript -->
+        </div>
+
+        <!-- SEÇÃO DE COMPETÊNCIAS INTERPESSOAIS -->
+        <h2 class="section-title" style="margin-top: 100px;">💪 Competências Interpessoais</h2>
+        <div class="soft-skills-container" id="soft-skills-grid">
+            <!-- Renderizado dinamicamente por JavaScript -->
+        </div>
+    </div>
+
+    <!-- SEÇÃO SOBRE -->
+    <section class="about-section" id="about" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px;">
+        <h2 class="section-title">Sobre Mim</h2>
+        <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-top: 40px;">
+            Sou um desenvolvedor full-stack apaixonado com experiência em construção de aplicações web modernas. 
+            Combino excelência técnica com resolução criativa de problemas para entregar soluções inovadoras. 
+            Minhas fortes competências interpessoais em comunicação e liderança me tornam um membro valioso da equipe que prospera em ambientes colaborativos.
+        </p>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section class="contact-section" id="contact" style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; text-align: center;">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">Vamos colaborar em seu próximo projeto</p>
+        <button class="cta-button">Envie um Email</button>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" title="GitHub">💻</a>
+                <a href="#" title="LinkedIn">🔗</a>
+                <a href="#" title="Twitter">𝕏</a>
+                <a href="#" title="Email">✉️</a>
+            </div>
+            <p class="footer-text">© 2024 Juliano. Todos os direitos reservados. | Criado com HTML, CSS e JavaScript Vanilla</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
